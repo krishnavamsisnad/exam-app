@@ -11,29 +11,29 @@ import { ProductserviovesService } from '../app/serives/productservioves.service
 })
 export class ProductDetailComponentComponent {
 
-  product:any
-  counter=0
-num=1
-  constructor(public router:ActivatedRoute,public rout:Router,public http:ProductserviovesService){
+  product: any
+  counter = 0
+  num = 1
+  constructor(public router: ActivatedRoute, public rout: Router, public http: ProductserviovesService) {
 
   }
 
-  ngOnInit(){
- let id=this.router.snapshot.params['id']
-this.http.getbyid(id).subscribe((data:any)=>{
-  console.log(data)
-  this.product=data
-})
+  ngOnInit() {
+    let id = this.router.snapshot.params['id']
+    this.http.getbyid(id).subscribe((data: any) => {
+      console.log(data)
+      this.product = data
+    })
   }
 
-  next(){
+  next() {
     this.rout.navigateByUrl('/buynow')
-  
+
   }
-  inc(){
-    this.counter=this.num++
+  inc() {
+    this.counter = this.num++
   }
-  dec(){
-    this.counter=this.num--
+  dec() {
+    this.counter = this.num--
   }
 }
