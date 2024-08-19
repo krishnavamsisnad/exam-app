@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { RatingComponentComponent } from '../rating-component/rating-component.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-review.component',
   standalone: true,
-  imports: [],
+  imports: [RatingComponentComponent,CommonModule],
   templateUrl: './product-review.component.component.html',
   styleUrl: './product-review.component.component.css'
 })
