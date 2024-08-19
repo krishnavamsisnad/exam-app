@@ -13,4 +13,4 @@ export const routes: Routes = [
     {path:'products/:id',component:ProductDetailComponentComponent},
     {path:'**',component:NotFoundComponentComponent}
   ];
-
+ 
