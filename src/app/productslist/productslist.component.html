@@ -1,1 +1,14 @@
-
+<div class="d-flex flex-wrap">
+    <div *ngFor="let p of  proudcts ">
+        
+            <div class="card m-2 p-2" style="width: 18rem; height: 18rem;" [routerLink]="['/products',p.id]">
+                <img   src={{p.image}} class="card-img-top w-50" alt="...">
+                <div class="card-body w-50">
+                    <b class="card-title">{{p.title}}</b>
+                    <p class="card-text">{{p.price}}</p>
+                   
+                </div>
+            </div>
+        
+    </div>
+</div>
