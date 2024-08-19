@@ -10,4 +10,12 @@ import { Component } from '@angular/core';
 export class ProductDetailComponentComponent {
 
   
+
+constructor (public )
+  ngOnInit(){
+    let id=this.router.snapshot.params['id']
+   this.http.getbyid(id).subscribe((data:any)=>{
+     console.log(data)
+     this.product=data
+   })
 }
