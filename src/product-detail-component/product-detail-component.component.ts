@@ -25,9 +25,6 @@ export class ProductDetailComponentComponent {
     })
   }
 
-  next() {
-    this.rout.navigateByUrl('/buynow')
-
-  }
+  
   
 }
