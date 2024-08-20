@@ -1,26 +1,19 @@
-// auth.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-  private isLoggedIn = false;
+  isLoggedIn = false; 
 
-  constructor() {}
+  constructor() { }
 
-  
   login() {
     this.isLoggedIn = true;
   }
-
 
   logout() {
     this.isLoggedIn = false;
   }
 
-
-  isAuthenticated(): boolean {
-    return this.isLoggedIn;
-  }
 }
