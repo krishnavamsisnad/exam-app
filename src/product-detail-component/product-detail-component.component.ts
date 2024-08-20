@@ -12,8 +12,7 @@ import { ProductserviovesService } from '../app/serives/productservioves.service
 export class ProductDetailComponentComponent {
 
   product: any
-  counter = 0
-  num = 1
+  
   constructor(public router: ActivatedRoute, public rout: Router, public http: ProductserviovesService) {
 
   }
@@ -30,10 +29,5 @@ export class ProductDetailComponentComponent {
     this.rout.navigateByUrl('/buynow')
 
   }
-  inc() {
-    this.counter = this.num++
-  }
-  dec() {
-    this.counter = this.num--
-  }
+  
 }
