@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-rating-component',
   standalone: true,
   imports: [CommonModule,RatingComponentComponent],
   templateUrl: './rating-component.component.html',
-  styleUrl: './rating-component.component.css'
+  styleUrl: './rating-component.component.css',
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class RatingComponentComponent {
   @Input() rating: number = 0;
   @Input() maxRating: number = 5;
   @Output() ratingChange: EventEmitter<number> = new EventEmitter<number>();
   stars: boolean[] = [];
-
+ 
   ngOnInit() {
     this.updateStars();
   }
