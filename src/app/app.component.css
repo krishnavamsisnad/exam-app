@@ -9,3 +9,44 @@
     box-sizing: border-box;
     
 }
+.a{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+background-color: red;
+}
+.b{
+    display: inline;
+    width: 100px;
+    height: 100px;
+background-color: red;
+}
+.container {
+    position: relative; /* This establishes a positioning context */
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: lightgray;
+}
+
+/* Child element with absolute positioning */
+.absolute-box {
+    position: absolute; /* Positioned relative to the .container */
+    bottom: 29px;
+    left: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    border: 1px solid orange;
+}
+
+/* Child element with relative positioning */
+.relative-box {
+    position: relative; /* Shifted from its normal position */
+    top: 10px; /* Moves 10px down from where it would normally be */
+    left: 20px; /* Moves 15px to the right */
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    border: 1px solid blue;
+}
